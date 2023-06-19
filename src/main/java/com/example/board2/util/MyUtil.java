@@ -4,5 +4,20 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MyUtil {
-
+		//전체 페이지의 갯수를 구한다
+	public int getPageCount(int numPerPage, int dataCount) {
+		int pageCount = 0;
+		pageCount = dataCount / numPerPage;
+		
+		if(dataCount % numPerPage != 0) {
+			pageCount++;
+		}
+		return pageCount;
+	}
+	
+	public String pageIndexList(int currentPage, int totalPage, String listUrl) {
+		StringBuffer sb = new StringBuffer();
+		int numPerBlock = 5; // 
+		return sb.toString();
+	}
 }
